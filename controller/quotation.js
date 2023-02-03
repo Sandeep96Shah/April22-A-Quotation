@@ -3,7 +3,8 @@ const User = require("../model/user");
 
 module.exports.createQuotation = async (req, res) => {
   try {
-    const { content, userId } = req.body;
+    const { content } = req.body;
+    const { _id: userId } = req.user || {};
     const newQuotation = await Quotation.create({
       content: content,
       user: userId,

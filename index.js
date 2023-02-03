@@ -1,5 +1,5 @@
 const express = require('express');
-const PORT = 700;
+const PORT = 8002;
 const app = express();
 const database = require('./config/mongoose');
 const cors = require('cors');
